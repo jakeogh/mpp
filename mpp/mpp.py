@@ -15,7 +15,7 @@ signal(SIGPIPE, SIG_DFL)
 
 def main():
     if len(sys.argv) < 2:
-        print('Usage: mpp PATH...', file=sys.stderr)
+        print("Usage: mpp PATH...", file=sys.stderr)
         sys.exit(1)
 
     tty = sys.stdout.isatty()
@@ -26,7 +26,7 @@ def main():
             continue
         found_arg = True
         if tty:
-            sys.stdout.write(repr(arg) + '\n')
+            sys.stdout.write(repr(arg) + "\n")
             continue
         sys.stdout.buffer.write(msgpack.packb(arg))
     return not found_arg
