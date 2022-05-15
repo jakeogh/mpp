@@ -1,4 +1,4 @@
-### mpp: (**m**)essage(**p**)ack (**p**)rint
+mpp: (**m**)essage(**p**)ack (**p**)rint
 
 #### Process enviromental properites:
 ```
@@ -12,7 +12,7 @@ stdout:
         else:
             print(messagepack(arg))
 ```
-Examples:
+#### Examples:
 ```
 $ mpp
 Usage: mpp [PATH]...
