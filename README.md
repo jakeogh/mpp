@@ -1,18 +1,20 @@
 mpp: (m)essage(p)ack (p)rint
 
 ```
-stdin: none
+stdin: closed
 args: N <= `getconf ARG_MAX`
 stdout:
-    if tty:
-        print(messagepack(arg))
-    else:
-        print(repr(arg))
+    for arg in args:
+        if tty:
+            print(repr(arg))
+        else:
+            print(messagepack(arg))
 ```
 ```
 $ mpp
-Usage: mpp PATH...
+Usage: mpp [PATH]...
 
+$ ## Examples:
 $ # if stdout is a tty (aka terminal):
 $ mpp 'a'
 b'a'
@@ -22,4 +24,8 @@ $ mpp 'a' | od -tx1 -v
 0000000 c4 01 61
 0000003
 
+$ # where c4 01 61 is:
+$ #  c4: bin8 https://github.com/msgpack/msgpack/blob/master/spec.md#bin-format-family
+$ #  01: one byte long
+$ #  61: a
 ```
