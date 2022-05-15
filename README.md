@@ -1,7 +1,9 @@
-mpp: (m)essage(p)ack (p)rint
+### mpp: (**m**)essage(**p**)ack (**p**)rint
 
+#### Process enviromental properites:
 ```
 stdin: closed
+env: not explicitly used
 args: N <= `getconf ARG_MAX`
 stdout:
     for arg in args:
@@ -10,6 +12,7 @@ stdout:
         else:
             print(messagepack(arg))
 ```
+Examples:
 ```
 $ mpp
 Usage: mpp [PATH]...
