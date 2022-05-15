@@ -10,6 +10,7 @@ from signal import signal
 import msgpack
 
 signal(SIGPIPE, SIG_DFL)
+sys.stdin.close()
 
 
 # since this is py3.8+, sys.argv: list[str]
@@ -25,6 +26,7 @@ def main():
     # def fsencode():
     #  filename.encode(encoding, errors)
     #  filename.encode('utf8', 'surrogateescape')
+
     # argvb = list(map(os.fsencode, sys.argv[1:]))
     argvb = map(os.fsencode, sys.argv[1:])
     found_arg = False
