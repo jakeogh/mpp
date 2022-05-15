@@ -1,7 +1,5 @@
 #!/bin/sh
 
-## Examples:
-
 # if stdout is a tty (aka terminal):
 #tty:
 mpp 'a'
