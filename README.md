@@ -14,7 +14,6 @@ stdout:
 $ mpp
 Usage: mpp [PATH]...
 
-$ ## Examples:
 $ # if stdout is a tty (aka terminal):
 $ mpp 'a'
 b'a'
