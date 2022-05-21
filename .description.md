@@ -1,6 +1,6 @@
 **mpp**: (**m**)essage(**p**)ack (**p**)rint
 
-#### Process enviromental properites:
+#### Psudocode:
 ```
 stdin: closed
 env: not explicitly used
