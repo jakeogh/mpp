@@ -4,18 +4,22 @@
 #### Description:
 ```
 writing each arg to stdout:
-    messagepack(fsencode(arg)) IFF sys.stdout.isatty(); else repr(arg):
+    messagepack(fsencode(arg)) IF sys.stdout.isatty(); ELSE repr(arg):
 
 You are using a terminal.
-You want to:
-(1): convert each arg you passed to mpp,
-    from:   the terminal input encoding
-    to:     the local filesystem encoding `os.fsencode(arg)`
-    thento: messagepack(arg)
+
+IF stdout is not a terminal:
+    convert each arg passed to mpp:
+        from:   the terminal input encoding
+        to:     the local filesystem encoding `os.fsencode(arg)`
+        thento: messagepack(arg)
+ELSE:
+    convert each arg passed to mpp:
+        from:   the terminal input encoding
+        to:     the local filesystem encoding `os.fsencode(arg)`
+        thento: repr(arg)
 
 Messagepack will preserve it's type for other applications that assume messagepacked stdin;
-IFF stdout is not a terminal.
-IFF stdout is a terminal, write a human readable representation of the result to it.
 
 In most setups, this means you enter unicode and write it's UTF-8 byte
 representation (messagepacked) to the pipe, or it's unicode repr() back to the terminal.
