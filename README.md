@@ -1,14 +1,20 @@
 **mpp**: (**m**)essage(**p**)ack (**p**)rint
 
- writing each arg to stdout:
+
+#### Description:
+```
+writing each arg to stdout:
     messagepack(fsencode(arg)) IFF sys.stdout.isatty(); else repr(arg):
 
-    You are on a terminal.
-    You want to write bytes to stdout that convert the terminal input encoding to the filesystem encoding, IFF
-    you are not writing back to the same terminal; otherwise, write a human readable representation of the result.
+You are on a terminal.
+You want to write the args you passed to mpp to stdout,
+after converting them from the terminal input encoding to the filesystem encoding,
+IFF you are not writing back to the same terminal.
+Otherwise, write a human readable representation of the result.
 
-    In most setups, this means you enter unicode and write it's UTF-8 byte representation to the pipe, or it's unicode repr() back to the terminal.
-
+In most setups, this means you enter unicode and write it's UTF-8 byte
+representation to the pipe, or it's unicode repr() back to the terminal.
+```
 
 #### Psudocode:
 ```
