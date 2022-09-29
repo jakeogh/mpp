@@ -9,8 +9,9 @@ writing each arg to stdout:
 You are on a terminal.
 You want to write the args you passed to mpp to stdout,
 after converting them from the terminal input encoding to the filesystem encoding,
-IFF you are not writing back to the same terminal.
-Otherwise, write a human readable representation of the result.
+and then wrapping them in the messagepack encoding to preserve their type,
+IFF stdout is not a terminal.
+Otherwise, write a human readable representation of the result to stdout.
 
 In most setups, this means you enter unicode and write it's UTF-8 byte
 representation to the pipe, or it's unicode repr() back to the terminal.
