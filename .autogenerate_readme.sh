@@ -11,7 +11,6 @@ mpp 'a' | od -tx1 -v
 #  c4: bin8 https://github.com/msgpack/msgpack/blob/master/spec.md#bin-format-family
 #  01: one byte long
 #  61: a
-#
 # <br>
 # compared to
 echo -n 'a' | od -tx1 -v
