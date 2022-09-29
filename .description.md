@@ -1,6 +1,7 @@
 **mpp**: (**m**)essage(**p**)ack (**p**)rint
 
-with messagepack(stdout) IFF sys.stdout.isatty(); else repr(stdout):
+ writing each arg to stdout:
+    messagepack(fsencode(arg)) IFF sys.stdout.isatty(); else repr(arg):
 
     You are on a terminal.
     You want to write bytes to stdout that convert the terminal input encoding to the filesystem encoding, IFF
