@@ -7,11 +7,12 @@ writing each arg to stdout:
     messagepack(fsencode(arg)) IFF sys.stdout.isatty(); else repr(arg):
 
 You are using a terminal.
-You want to convert each arg you passed to mpp,
-from the terminal input encoding,
-to the local filesystem encoding.
-And then take each arg (which is now a typed python object),
-and wrap it in messagepack.
+You want to:
+(1): convert each arg you passed to mpp,
+    from:   the terminal input encoding
+    to:     the local filesystem encoding `os.fsencode(arg)`
+    thento: messagepack(arg)
+
 Messagepack will preserve it's type for other applications that assume messagepacked stdin;
 IFF stdout is not a terminal.
 IFF stdout is a terminal, write a human readable representation of the result to it.
