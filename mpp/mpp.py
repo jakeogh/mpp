@@ -16,7 +16,7 @@ sys.stdin.close()
 # since this is py3.8+, sys.argv: list[str]
 def main():
     if len(sys.argv) < 2:
-        print("Usage: mpp [PATH]...", file=sys.stderr)
+        print("Usage: mpp [ARG]...", file=sys.stderr)
         sys.exit(1)
 
     tty = sys.stdout.isatty()
