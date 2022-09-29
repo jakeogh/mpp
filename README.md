@@ -32,7 +32,7 @@ stdout:
 #### Examples:
 ```
 $ mpp
-Usage: mpp [PATH]...
+Usage: mpp [ARG]...
 
 $ # if stdout is a tty (aka terminal):
 $ mpp 'a'
