@@ -12,3 +12,5 @@ mpp 'a' | od -tx1 -v
 #  01: one byte long
 #  61: a
 
+# compared to
+echo -n 'a' | od -tx1 -v
