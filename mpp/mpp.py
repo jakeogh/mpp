@@ -27,7 +27,6 @@ def main():
     #   filename.encode(encoding, errors)
     #   filename.encode('utf8', 'surrogateescape')
 
-    # argvb = list(map(os.fsencode, sys.argv[1:]))
     argvb = map(os.fsencode, sys.argv[1:])
     found_arg = False
     for arg in argvb:
