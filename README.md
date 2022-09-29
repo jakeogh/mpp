@@ -10,7 +10,7 @@ You are using a terminal.
 You want to convert each arg you passed to mpp,
 from the terminal input encoding,
 to the local filesystem encoding.
-Then you want to take each arg (which is now a typed python object),
+And then take each arg (which is now a typed python object),
 and wrap it in messagepack.
 Messagepack will preserve it's type for other applications that assume messagepacked stdin;
 IFF stdout is not a terminal.
