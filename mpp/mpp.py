@@ -24,8 +24,8 @@ def main():
     # https://vstinner.github.io/pep-383.html
     # https://github.com/python/cpython/blob/3.10/Lib/os.py#L804
     # def fsencode():
-    #  filename.encode(encoding, errors)
-    #  filename.encode('utf8', 'surrogateescape')
+    #   filename.encode(encoding, errors)
+    #   filename.encode('utf8', 'surrogateescape')
 
     # argvb = list(map(os.fsencode, sys.argv[1:]))
     argvb = map(os.fsencode, sys.argv[1:])
