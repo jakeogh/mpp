@@ -20,7 +20,7 @@ In most setups, this means you enter unicode and write it's UTF-8 byte
 representation (messagepacked) to the pipe, or it's unicode repr() back to the terminal.
 ```
 
-#### Psudocode:
+#### pyPsudocode:
 ```
 stdin: not read from, explicitely closed on startup
 env (`man 1p export`): not explicitly used
