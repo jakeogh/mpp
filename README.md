@@ -48,7 +48,6 @@ $ # where c4 01 61 is:
 $ #  c4: bin8 https://github.com/msgpack/msgpack/blob/master/spec.md#bin-format-family
 $ #  01: one byte long
 $ #  61: a
-$ #
 $ 
 
 $ # compared to
