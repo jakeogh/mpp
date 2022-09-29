@@ -4,7 +4,7 @@
 #tty:
 mpp 'a'
 
-# if stdout is not a tty
+# if stdout is not a tty:
 mpp 'a' | od -tx1 -v
 
 # where c4 01 61 is:
@@ -12,5 +12,5 @@ mpp 'a' | od -tx1 -v
 #  01: one byte long
 #  61: a
 # <br>
-# compared to
+# compared to:
 echo -n 'a' | od -tx1 -v
