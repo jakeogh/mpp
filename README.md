@@ -14,7 +14,7 @@ IFF stdout is not a terminal.
 Otherwise, write a human readable representation of the result to stdout.
 
 In most setups, this means you enter unicode and write it's UTF-8 byte
-representation to the pipe, or it's unicode repr() back to the terminal.
+representation (messagepacked) to the pipe, or it's unicode repr() back to the terminal.
 ```
 
 #### Psudocode:
